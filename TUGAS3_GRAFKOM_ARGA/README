@@ -1,0 +1,170 @@
+# 🎨 Aplikasi Grafis 2D
+
+Aplikasi grafis 2D interaktif yang memungkinkan pengguna untuk menggambar dan memanipulasi objek geometri dengan mudah menggunakan mouse.
+
+## ✨ Fitur Utama
+
+### 🔧 Alat Gambar
+- **Titik (Point)** - Menggambar titik dengan ukuran yang dapat disesuaikan
+- **Garis (Line)** - Menggambar garis lurus antar dua titik
+- **Persegi (Rectangle)** - Menggambar persegi panjang atau persegi
+- **Ellipse** - Menggambar ellipse atau lingkaran
+
+### 🎨 Kontrol Visual
+- **Pemilih Warna** - Pilih warna untuk objek yang akan digambar
+- **Pengatur Ketebalan** - Atur ketebalan garis dari 1-20 pixel
+- **Preview Real-time** - Lihat preview objek saat menggambar
+
+### 🔄 Transformasi Objek
+- **Translasi** - Geser objek ke posisi baru
+- **Rotasi** - Putar objek dengan sudut yang dapat disesuaikan
+- **Scaling** - Perbesar atau perkecil ukuran objek
+- **Reset** - Kembalikan objek ke transformasi awal
+
+### 📝 Manajemen Objek
+- **Daftar Objek** - Lihat semua objek yang telah dibuat
+- **Seleksi Objek** - Klik objek untuk memilih dan memanipulasi
+- **Indikator Seleksi** - Objek terpilih ditandai dengan border merah
+- **Informasi Posisi** - Tampilkan koordinat objek
+
+## 🚀 Cara Menjalankan
+
+### Metode 1: Langsung di Browser
+1. Buka file `index.html` langsung di browser web
+2. Aplikasi akan langsung berjalan tanpa memerlukan server
+
+### Metode 2: Menggunakan Python Server (Opsional)
+1. Pastikan Python 3.x terinstall di sistem Anda
+2. Jalankan server Python:
+   ```bash
+   python main.py
+   ```
+3. Buka browser dan kunjungi `http://localhost:8000`
+
+## 📖 Petunjuk Penggunaan
+
+### Menggambar Objek
+1. **Pilih Alat**: Klik salah satu tombol alat (Titik, Garis, Persegi, Ellipse)
+2. **Atur Warna**: Gunakan color picker untuk memilih warna
+3. **Atur Ketebalan**: Geser slider untuk mengatur ketebalan garis
+4. **Gambar di Canvas**:
+   - **Titik**: Klik di canvas
+   - **Garis/Persegi/Ellipse**: Klik dan drag dari titik awal ke titik akhir
+
+### Memanipulasi Objek
+1. **Pilih Objek**: Klik objek di canvas atau di daftar objek
+2. **Pilih Transformasi**: Klik tombol transformasi (Geser, Putar, Skala)
+3. **Terapkan Transformasi**: Drag di canvas untuk menerapkan transformasi
+4. **Reset**: Klik tombol "Reset" untuk mengembalikan ke posisi awal
+
+### Fitur Tambahan
+- **Bersihkan Canvas**: Klik tombol "🗑️ Bersihkan Canvas" untuk menghapus semua objek
+- **Status Bar**: Pantau status aplikasi dan jumlah objek di bagian bawah
+- **Responsive Design**: Aplikasi dapat digunakan di desktop dan mobile
+
+## 🛠️ Teknologi yang Digunakan
+
+### Frontend
+- **HTML5 Canvas** - Untuk rendering grafis 2D
+- **JavaScript ES6+** - Logika aplikasi dan interaksi
+- **CSS3** - Styling dengan glassmorphism dan animasi modern
+- **Responsive Design** - Kompatibel dengan berbagai ukuran layar
+
+### Backend (Opsional)
+- **Python 3.x** - Server HTTP sederhana
+- **JSON** - Format penyimpanan data proyek
+- **HTTP Server** - Melayani file statis dan API
+
+## 📁 Struktur File
+
+```
+aplikasi-grafis-2d/
+├── index.html          # File utama aplikasi
+├── main.py            # Server Python (opsional)
+├── README.md          # Dokumentasi ini
+└── graphics_data/     # Folder data proyek (dibuat otomatis)
+```
+
+## 🎯 Fitur Khusus
+
+### Interface Modern
+- **Glassmorphism Design** - Efek kaca buram yang modern
+- **Gradient Background** - Latar belakang gradien yang menarik
+- **Smooth Animations** - Animasi halus pada hover dan transisi
+- **Intuitive Controls** - Kontrol yang mudah dipahami
+
+### Interaksi Mouse
+- **Click to Draw** - Klik untuk menggambar titik
+- **Drag to Create** - Drag untuk membuat garis, persegi, dan ellipse
+- **Preview Mode** - Preview real-time saat menggambar
+- **Object Selection** - Klik objek untuk memilih
+
+### Transformasi Lanjutan
+- **Center-based Transformation** - Transformasi berdasarkan titik tengah objek
+- **Cumulative Transform** - Transformasi dapat ditumpuk
+- **Visual Feedback** - Indikator visual untuk objek terpilih
+
+## 🔧 Kustomisasi
+
+### Menambah Alat Baru
+1. Tambahkan tombol alat baru di HTML
+2. Implementasikan logika gambar di JavaScript
+3. Tambahkan case baru di fungsi `drawObject()` dan `drawPreview()`
+
+### Mengubah Warna Tema
+1. Edit variabel CSS di bagian `:root`
+2. Sesuaikan gradient background di class `.body`
+3. Ubah warna accent di class `.tool-btn.active`
+
+### Menambah Transformasi
+1. Tambahkan tombol transformasi baru
+2. Implementasikan logika di fungsi `handleTransformEnd()`
+3. Tambahkan case baru untuk mode transformasi
+
+## 🐛 Troubleshooting
+
+### Canvas Tidak Muncul
+- Pastikan browser mendukung HTML5 Canvas
+- Cek console browser untuk error JavaScript
+- Pastikan file HTML dibuka dengan benar
+
+### Objek Tidak Bisa Dipilih
+- Pastikan mengklik area objek yang tepat
+- Coba klik di area tengah objek
+- Periksa apakah objek tertutup oleh objek lain
+
+### Transformasi Tidak Bekerja
+- Pilih objek terlebih dahulu sebelum transformasi
+- Pastikan mode transformasi aktif (cek status bar)
+- Drag di canvas setelah memilih mode transformasi
+
+## 📝 Catatan Pengembangan
+
+### Fitur yang Akan Datang
+- [ ] Undo/Redo functionality
+- [ ] Copy/Paste objek
+- [ ] Export ke format gambar (PNG, SVG)
+- [ ] Import gambar sebagai background
+- [ ] Layer management
+- [ ] Grid dan snap-to-grid
+- [ ] Keyboard shortcuts
+
+### Kontribusi
+Untuk berkontribusi pada proyek ini:
+1. Fork repository
+2. Buat branch fitur baru
+3. Commit perubahan
+4. Push ke branch
+5. Buat Pull Request
+
+## 📄 Lisensi
+
+Proyek ini dibuat untuk tujuan edukasi dan dapat digunakan secara bebas dengan memberikan atribusi yang sesuai.
+
+## 👨‍💻 Tentang
+
+Aplikasi ini dikembangkan sebagai contoh implementasi grafis 2D interaktif menggunakan HTML5 Canvas dan JavaScript. Cocok untuk pembelajaran pemrograman grafis, pengembangan web, dan sebagai dasar untuk aplikasi drawing yang lebih kompleks.
+
+---
+
+**Selamat menggambar! 🎨**
